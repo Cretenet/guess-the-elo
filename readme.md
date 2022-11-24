@@ -87,3 +87,4 @@ I then wondered if getting rid of one of the features would make the performance
 
 ## Conclusion :
 Getting a MAE of 144 on the best model is a very satisfying results. Indeed, guessing the elo of a player based on only one result without even knowing how many inaccuracies / mistakes / blunders he made is very good. Since the main application of this model is to find the actual elo of an unranked player to better prepare against him, the user could simply enter more than only one game to have multiple predictions and choose the average (which probably better represents their actual elo).
+A possible improvement would be to have access to a chess engine that is able to count the number of inaccuracies / mistakes / blunders OR that is able to give a grade to each game (like the accuracy on chess.com). Using this information for each 20000+ games in the dataset would surely give an even more reliable model.
