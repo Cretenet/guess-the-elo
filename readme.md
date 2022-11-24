@@ -37,3 +37,14 @@ Here is a list of the columns of the dataset:
 
 ## Data Cleaning and Engineering
 There are no missing values in this dataset. However, some columns are so far unusable in our Machine Learning Models. The steps are described in data_exploration.ipynb but here is a list of what was done :
+* Opening Name : Initially, there were way too many different names, some of which appeared only once. I decided to simplify them in the following way : OpeningName #Numbre : NameOfVariation | OtherNameOfVariation => OpeningName. After that, there were still too many different names so I kept only the onces that appeared at least 100 times (the other onces were put in the category 'other').
+* Increment Code : I decided to separate the total time and the increment time in two columns : e.g. increment_code = 25 + 5 => game_time = 25 and increment = 5
+* Victory_status and Winner : I wanted to see these data from white's perspective. 'winner' became 'result' and the values went from 'black/white/draw' to 'lose/win/draw'. I also created two columns : out_of_time and resign, that are true if the victory_status is one of them. If both are false and the result is win or lose, then it means that the victory_status was 'mate'
+* IDs : they were obviously all dropped
+* Moves : Kept but useless without a chess engine that can tell us if the players played well
+* Opening_eco : Dropped since we already have the opening_name
+* Dates (created_at, last_move_at) : Dropped since obviously irrelevent
+
+<hr/> 
+
+## Preprocessing :
